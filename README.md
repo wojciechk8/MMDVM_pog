@@ -1,17 +1,33 @@
-This project is a hardware for the Multi-Mode Digital Voice Modem ([MMDVM](https://github.com/g4klx/MMDVM)). Instead of depending on MCU development boards (like Arduino, STM Discovery, etc.), this design contains a microcontroller itself, so no additional stuff is required. This project is based on [SQ6POG](https://github.com/sq6pog)'s idea, and hence its name.
+This project is a hardware for the Multi-Mode Digital Voice Modem
+([MMDVM](https://github.com/g4klx/MMDVM)). Instead of depending on
+MCU development boards (like Arduino, STM Discovery, etc.), this design
+contains a microcontroller itself, so no additional stuff is required.
+This project is based on [SQ6POG](https://www.qrz.com/db/SQ6POG)'s idea,
+and hence its name.
 
 ## Hardware 
-The board contains STM32F105RBT MCU, two active low-pass filters: for ADC and DAC. Additionally there is a place for an optional TCXO with buffer circuitry and LED indicators.
+The board contains STM32F105RBT MCU, two active low-pass filters: for
+ADC and DAC. Additionally there is a place for an optional TCXO with
+a buffer circuitry and LED indicators.
 
 The PCB is prepared to be populated in two configurations listed below.
 ### Stand-alone
 The board is populated with FT230XS USB-to-UART converter and 3.3V LDO
 
 ### As a Raspberry Pi HAT
-This configuration is almost the same as previous, but with RPi connector and without USB-to-UART converter and LDO.
+This configuration is almost the same as previous, but with RPi
+connector and without USB-to-UART converter and LDO.
 
 ## Building firmware
-Fork of the original [MMDVM](https://github.com/g4klx/MMDVM) firmware that supports this board can be found [here](https://raw.githubusercontent.com/wojciechk8/) (maybe it'll be merged into the origin repository in the near future). Hardware configuration should be adjusted in the Config.h file. The firmware can be built with the GNU ARM toolchain. An additional requirement is the STM32CubeF1 package, which can be found at STMicroelectronics website. Path to the CMSIS directory of the extrected package should be adjusted in the Makefile.CMSIS as CMSISDIR definition. Finally to build the firmware simply run:
+Fork of the original [MMDVM](https://github.com/g4klx/MMDVM) firmware
+that supports this board can be found [here](https://raw.githubusercontent.com/wojciechk8/)
+(maybe it'll be merged into the origin repository in the near future).
+Hardware configuration should be adjusted in the Config.h file.
+The firmware can be built with the GNU ARM toolchain. An additional
+requirement is the STM32CubeF1 package, which can be found at
+STMicroelectronics website. Path to the CMSIS directory of the extrected
+package should be adjusted in the Makefile.CMSIS as CMSISDIR definition.
+Finally to build the firmware simply run:
 ```
 make -f Makefile.CMSIS
 ```
@@ -28,25 +44,40 @@ If you don't have ST-LINK and want to use bootloader, then run:
 ```
 make -f Makefile.CMSIS program_bl
 ```
-(you will need *stm32flash* software; serial port can be selected in the Makefile)
+(you will need *stm32flash* software; serial port can be selected
+in the Makefile)
 
 ## Hacking
 ### Schematic/PCB
-This project was designed using *gEDA* software. In order to modify the schematic you will need my library of symbols/footprints, which is available [here](https://github.com/wojciechk8/geda-sym). Update of the PCB is done in root directory with command:
+This project was designed using *gEDA* software. In order to modify
+the schematic you will need my library of symbols/footprints, which is
+available [here](https://github.com/wojciechk8/geda-sym). Update of
+the PCB is done in the root directory with this command:
 ```
 gsch2pcb mmdvm_pog.prj
 ```
+Postscript and pdf export of PCB is done with:
+```
+./pcb_export mmdvm_pog.pcb
+```
 
 ### Filter simulation
-![Filter frequency response simulation](https://raw.githubusercontent.com/wojciechk8/MMDVM_pog/master/sim/plot/filter.png "Filter frequency response simulation")
+<p align="center"><img src="https://raw.githubusercontent.com/wojciechk8/MMDVM_pog/master/sim/plot/filter.png" alt="Filter frequency response simulation"></p>
 
-Simulation of the filter (sim directory) was performed in *ngspice* and the graphical plot output was generated using *gnuplot*. To run simulation use the script provided:
+The simulation of the filter (sim directory) was performed in *ngspice*
+and the graphical plot output was generated using *gnuplot*. To run
+the simulation use the script provided:
 ```
 ./simulate filter.sch
 ```
 
 ## License
-This project is licensed under the CC-BY-NC-SA (Creative Commons - Attribution, Noncommercial, Share Alike) license and is intended for amateur and educational use only.
-![CC-BY-NC-SA](https://raw.githubusercontent.com/wojciechk8/MMDVM_pog/master/Cc-by-nc-sa_icon.png "CC-BY-NC-SA")
+This project is licensed under the CC-BY-NC-SA
+(Creative Commons - Attribution, Noncommercial, Share Alike) license
+and is intended for amateur and educational use only.
 
-MMDVM software is licenced under the GPL v2 and is intended for amateur and educational use only. Use of this software for commercial purposes is strictly forbidden.
+<p align="center"><img src="https://raw.githubusercontent.com/wojciechk8/MMDVM_pog/master/Cc-by-nc-sa_icon.png" alt="CC-BY-NC-SA"></p>
+
+MMDVM software is licenced under the GPL v2 and is intended for amateur
+and educational use only. Use of this software for commercial purposes
+is strictly forbidden.
