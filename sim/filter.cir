@@ -185,28 +185,20 @@ R62 0 62 REXP 99U
 *^^^^^^^^  End of included SPICE model from MCP601.cir ^^^^^^^^
 *
 *==============  Begin SPICE netlist of main design ============
-C101 7 OUT_FBZ 39n  
-C100 0 6 10n  
-R100 8 6 5.1k  
-V100 8 0 DC 0 AC 1
-R102 7 5 4.7k  
-C102 0 7 1n  
-R101 6 7 4.7k  
-XU100 5 OUT_FBZ VCC PWR OUT_FBZ MCP601
 C20 0 2 10n  
 R10 4 2 3.3k  
 *.OPTIONS ABSTOL=1nA VNTOL=1uV CHGTOL=1pC ITL1=150 ITL2=150 ITL4=500 RELTOL=0.001
 
 .CONTROL
   AC DEC 100 1 100k
-  PLOT Vdb(out) Vdb(out_fbz)
+  PLOT Vdb(out)
   MEAS ac fc WHEN vdb(out)=-3
   MEAS ac gain_err min vdb(out) FROM=100 TO=3k
   SET gnuplot_terminal=png
   SET UNITS=DEGREES
-  GNUPLOT filter_a Vdb(out)
-  GNUPLOT filter_p unwrap(Vp(out))
-  PLOT unwrap(Vp(out)) unwrap(Vp(out_fbz))
+*  GNUPLOT filter_a Vdb(out)
+*  GNUPLOT filter_p unwrap(Vp(out))
+  PLOT unwrap(Vp(out))
 .ENDC
 
 V3 4 0 DC 0 AC 1
