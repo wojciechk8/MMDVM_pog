@@ -1,0 +1,20 @@
+REV 0.1 ----------------------------------------------------------------
+  Initial revision
+
+REV 0.2 ----------------------------------------------------------------
+  Schematic:
+  1. Corrected U61 footprint (SC70_5 -> SOT23_5)
+  2. Changed value of C63, C21, C22, C23 from 39p to 680p
+  3. Changed value of C54, C55 from 39p to 47p
+  4. Added R62 to reduce EMI on TCXO buffer output
+  5. Added ESD protection to radio connector (J21)
+  6. Connected +5V rail to RPi connector
+  7. Removed reset connector (J1)
+  8. Added BOOT0 bootstrap jumper (JP1)
+  9. Redesigned filters (refdes: *3x, *4x)
+  
+  PCB:
+  1. Corrected placement of some components
+  2. Changed RPi connector footprint
+  
+  

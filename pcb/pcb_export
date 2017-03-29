@@ -1,0 +1,24 @@
+#!/bin/bash
+
+set -e
+
+PS_BLOAT="-1mil"
+
+#pcb -x png --outfile ${1%.pcb}.png --dpi 400 $1
+#pcb -x png --outfile ${1%.pcb}_top.png --dpi 600 --photo-mode --photo-plating copper $1
+#pcb -x png --outfile ${1%.pcb}_bot.png --dpi 600 --photo-mode --photo-flip-x --photo-plating copper $1
+pcb -x ps --psfile ${1%.pcb}.ps --ps-bloat $PS_BLOAT --align-marks --outline --auto-mirror --media A5 --drill-copper --show-legend $1
+pcb -x ps --psfile ${1%.pcb}_inv.ps --ps-bloat $PS_BLOAT --align-marks --outline --mirror --auto-mirror --ps-invert --media A5 --no-drill-copper --show-legend $1
+pcb -x ps --psfile ${1%.pcb}_scaled.ps --ps-bloat $PS_BLOAT --psfade 0.25 --scale 1.5 --align-marks --outline --auto-mirror --media A4 --drill-copper --show-legend $1
+
+psselect 2 ${1%.pcb}_inv.ps ${1%.pcb}_top.ps
+psselect 3 ${1%.pcb}_inv.ps ${1%.pcb}_bot.ps
+psselect _1 ${1%.pcb}.ps ${1%.pcb}_fab.ps
+psselect -p_3 -p_2 ${1%.pcb}_scaled.ps ${1%.pcb}_assy.ps
+
+gs -o ${1%.pcb}_top.pdf -sDEVICE=pdfwrite -sPAPERSIZE=a5 -dFIXEDMEDIA -dCompatibilityLevel=1.4 ${1%.pcb}_top.ps
+gs -o ${1%.pcb}_bot.pdf -sDEVICE=pdfwrite -sPAPERSIZE=a5 -dFIXEDMEDIA -dCompatibilityLevel=1.4 ${1%.pcb}_bot.ps
+gs -o ${1%.pcb}_fab.pdf -sDEVICE=pdfwrite -sPAPERSIZE=a5 -dFIXEDMEDIA -dCompatibilityLevel=1.4 ${1%.pcb}_fab.ps
+gs -o ${1%.pcb}_assy.pdf -sDEVICE=pdfwrite -sPAPERSIZE=a4 -dPDFFitPage -dCompatibilityLevel=1.4 ${1%.pcb}_assy.ps
+
+rm ${1%.pcb}_inv.ps ${1%.pcb}_top.ps ${1%.pcb}_bot.ps ${1%.pcb}_fab.ps ${1%.pcb}_assy.ps ${1%.pcb}_scaled.ps

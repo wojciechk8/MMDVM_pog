@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+
+gnetlist -g spice-sdb -o ${1%.sch}.cir ${1}
+ngspice ${1%.sch}.cir

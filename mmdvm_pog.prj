@@ -1,0 +1,4 @@
+schematics sch/mmdvm_pog.sch
+output-name	pcb/mmdvm_pog
+
+gnetlist partslist4 -o mmdvm_pog.parts
