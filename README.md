@@ -20,7 +20,7 @@ connector and without USB-to-UART converter and LDO.
 
 ## Building firmware
 Fork of the original [MMDVM](https://github.com/g4klx/MMDVM) firmware
-that supports this board can be found [here](https://raw.githubusercontent.com/wojciechk8/)
+that supports this board can be found [here](https://github.com/wojciechk8/MMDVM)
 (maybe it'll be merged into the origin repository in the near future).
 Hardware configuration should be adjusted in the Config.h file.
 The firmware can be built with the GNU ARM toolchain. An additional
