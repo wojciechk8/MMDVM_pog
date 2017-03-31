@@ -19,14 +19,36 @@ This configuration is almost the same as previous, but with RPi
 connector and without USB-to-UART converter and LDO.
 
 ## Building firmware
-Fork of the original [MMDVM](https://github.com/g4klx/MMDVM) firmware
-that supports this board can be found [here](https://github.com/wojciechk8/MMDVM)
-(maybe it'll be merged into the origin repository in the near future).
-Hardware configuration should be adjusted in the Config.h file.
-The firmware can be built with the GNU ARM toolchain. An additional
-requirement is the STM32CubeF1 package, which can be found at
-STMicroelectronics website. Path to the CMSIS directory of the extrected
-package should be adjusted in the Makefile.CMSIS as CMSISDIR definition.
+You can get the firmware from [MMDVM](https://github.com/g4klx/MMDVM)
+github. The firmware can be built with the GNU ARM toolchain.
+An additional requirement is the STM32CubeF1 package, which can be found
+at STMicroelectronics website. Path to the CMSIS directory of
+the extrected package should be adjusted in the Makefile.CMSIS as
+CMSISDIR definition. Also uncomment these defines in the Config.h
+file:
+```
+// For the SQ6POG board
+#define STM32F1_POG
+```
+to enable MMDVM_pog board support,
+```
+// Pass RSSI information to the host
+#define SEND_RSSI_DATA
+```
+to enable RSSI feature,
+```
+// Use pins to output the current mode
+#define ARDUINO_MODE_PINS
+```
+to enable mode LEDs output,
+```
+// For 19.2 MHz
+#define EXTERNAL_OSC 19200000
+```
+if you want to use external TCXO.
+
+Be sure that defines regarding other boards are commented.
+
 Finally to build the firmware simply run:
 ```
 make -f Makefile.CMSIS
