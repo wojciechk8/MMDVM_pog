@@ -16,9 +16,7 @@ psselect 3 ${1%.pcb}_inv.ps ${1%.pcb}_bot.ps
 psselect _1 ${1%.pcb}.ps ${1%.pcb}_fab.ps
 psselect -p_3 -p_2 ${1%.pcb}_scaled.ps ${1%.pcb}_assy.ps
 
-gs -o ${1%.pcb}_top.pdf -sDEVICE=pdfwrite -sPAPERSIZE=a5 -dFIXEDMEDIA -dCompatibilityLevel=1.4 ${1%.pcb}_top.ps
-gs -o ${1%.pcb}_bot.pdf -sDEVICE=pdfwrite -sPAPERSIZE=a5 -dFIXEDMEDIA -dCompatibilityLevel=1.4 ${1%.pcb}_bot.ps
-gs -o ${1%.pcb}_fab.pdf -sDEVICE=pdfwrite -sPAPERSIZE=a5 -dFIXEDMEDIA -dCompatibilityLevel=1.4 ${1%.pcb}_fab.ps
+gs -o ${1%.pcb}.pdf -sDEVICE=pdfwrite -sPAPERSIZE=a5 -dFIXEDMEDIA -dCompatibilityLevel=1.4 ${1%.pcb}_top.ps ${1%.pcb}_bot.ps ${1%.pcb}_fab.ps
 gs -o ${1%.pcb}_assy.pdf -sDEVICE=pdfwrite -sPAPERSIZE=a4 -dPDFFitPage -dCompatibilityLevel=1.4 ${1%.pcb}_assy.ps
 
 rm ${1%.pcb}_inv.ps ${1%.pcb}_top.ps ${1%.pcb}_bot.ps ${1%.pcb}_fab.ps ${1%.pcb}_assy.ps ${1%.pcb}_scaled.ps
