@@ -1340,7 +1340,7 @@ Element["" "0603" "R61" "1M" 33.0940mm 41.4960mm 30.00mil -135.00mil 0 78 ""]
 
 	)
 
-Element["" "SOT23" "Q1" "PDTA143Z" 36.9040mm 40.3530mm -20.00mil -80.00mil 0 78 ""]
+Element["" "SOT23" "Q1" "PDTA143ZT" 36.9040mm 40.3530mm -20.00mil -80.00mil 0 78 ""]
 (
 	Attribute("device" "TRANSISTOR")
 	Attribute("manufacturer" "unknown")
