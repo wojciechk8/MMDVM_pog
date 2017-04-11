@@ -5,7 +5,7 @@ set -e
 PS_BLOAT="-1mil"
 
 #pcb -x png --outfile ${1%.pcb}.png --dpi 400 $1
-#pcb -x png --outfile ${1%.pcb}_top.png --dpi 600 --photo-mode --photo-plating copper $1
+pcb -x png --outfile ${1%.pcb}.png --dpi 600 --photo-mode --photo-plating copper --photo-mask-colour purple $1
 #pcb -x png --outfile ${1%.pcb}_bot.png --dpi 600 --photo-mode --photo-flip-x --photo-plating copper $1
 pcb -x ps --psfile ${1%.pcb}.ps --ps-bloat $PS_BLOAT --align-marks --outline --auto-mirror --media A5 --drill-copper --show-legend $1
 pcb -x ps --psfile ${1%.pcb}_inv.ps --ps-bloat $PS_BLOAT --align-marks --outline --mirror --auto-mirror --ps-invert --media A5 --no-drill-copper --show-legend $1

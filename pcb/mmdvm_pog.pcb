@@ -1,11 +1,11 @@
-# release: pcb v4.0.0-g24fc8410
+# release: pcb v4.0.0-ga246c150
 
 # To read pcb files, the pcb version (or the git source date) must be >= the file version
 FileVersion[20100606]
 
 PCB["MMDVM_pog" 2610.00mil 2300.00mil]
 
-Grid[5.00mil 0.0740mm 0.0940mm 1]
+Grid[10.00mil 0.0740mm 0.0940mm 1]
 PolyArea[3100.006200]
 Thermal[0.500000]
 DRC[7.68mil 0.1000mm 0.2000mm 5.91mil 0.2800mm 0.2800mm]
@@ -785,8 +785,8 @@ Symbol['~' 12.00mil]
 	SymbolLine[15.00mil 35.00mil 20.00mil 35.00mil 8.00mil]
 	SymbolLine[20.00mil 35.00mil 25.00mil 30.00mil 8.00mil]
 )
-Attribute("PCB::grid::unit" "mm")
-Attribute("PCB::grid::size" "5.00mil")
+Attribute("PCB::grid::unit" "mil")
+Attribute("PCB::grid::size" "10.00mil")
 Attribute("PCB::loader" "geda/pcb - nanometer")
 Attribute("PCB::conf::editor/draw_grid" "true")
 Attribute("PCB::conf::rc/library_search_paths" "../pcblib [[pcb-rnd]] ~/pcblib/ [[pcb-rnd]] $(rc.path.share)/pcblib [[pcb-rnd]] $(rc.path.home)/.gEDA/fp/ [[pcb-rnd]] ../pcblib [[pcb-rnd]] ~/pcblib/ [[pcb-rnd]] $(rc.path.share)/pcblib [[pcb-rnd]] $(rc.path.home)/.gEDA/fp/ [[pcb-rnd]] ../pcblib [[pcb-rnd]] ~/pcblib/ [[pcb-rnd]] $(rc.path.share)/pcblib [[pcb-rnd]] $(rc.path.home)/.gEDA/fp/ [[pcb-rnd]] ../pcblib [[pcb-rnd]] ~/pcblib/ [[pcb-rnd]] $(rc.path.share)/pcblib [[pcb-rnd]] $(rc.path.home)/.gEDA/fp/ [[pcb-rnd]] ../pcblib [[pcb-rnd]] ~/pcblib/ [[pcb-rnd]] $(rc.path.share)/pcblib [[pcb-rnd]] $(rc.path.home)/.gEDA/fp/ [[pcb-rnd]] ../pcblib [[pcb-rnd]] ~/pcblib/ [[pcb-rnd]] $(rc.path.share)/pcblib [[pcb-rnd]] $(rc.path.home)/.gEDA/fp/ [[pcb-rnd]] ../pcblib [[pcb-rnd]] ~/pcblib/ [[pcb-rnd]] $(rc.path.share)/pcblib [[pcb-rnd]] $(rc.path.home)/.gEDA/fp/ [[pcb-rnd]] ../pcblib [[pcb-rnd]] ~/pcblib/ [[pcb-rnd]] $(rc.path.share)/pcblib [[pcb-rnd]] $(rc.path.home)/.gEDA/fp/")
@@ -3085,7 +3085,7 @@ Layer(1 "top" "copper")
 	Text[1.7250mm 31.5460mm 0 105 "RSSI" "clearline"]
 	Text[2.2330mm 34.0860mm 0 105 "GND" "clearline"]
 	Text[25.6840mm 53.4340mm 0 115 "pog" "clearline"]
-	Text[40.0790mm 8.6030mm 0 122 "CC-BY-NC-SA" "clearline"]
+	Text[37.2850mm 8.3490mm 0 122 "CC-BY-NC-SA" "clearline"]
 	Polygon("clearpoly")
 	(
 		[30.6810mm 24.8590mm] [40.5870mm 24.8590mm] [40.5870mm 34.7650mm] [30.6810mm 34.7650mm] 
@@ -4017,7 +4017,7 @@ Layer(7 "top silk" "silk")
 	Text[1.7250mm 31.5460mm 0 105 "RSSI" "clearline"]
 	Text[2.2330mm 34.0860mm 0 105 "GND" "clearline"]
 	Text[25.6840mm 53.4340mm 0 115 "pog" "clearline"]
-	Text[40.0790mm 8.6030mm 0 122 "CC-BY-NC-SA" "clearline"]
+	Text[37.2850mm 8.3490mm 0 122 "CC-BY-NC-SA" "clearline"]
 	Polygon("clearpoly")
 	(
 		[34.3754mm 55.9102mm] [34.3711mm 55.9062mm] [34.3533mm 55.8539mm] [34.3546mm 55.8483mm] [34.3546mm 55.8414mm] 
