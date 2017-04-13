@@ -61,13 +61,7 @@ To program the device with SWD, run:
 make -f Makefile.CMSIS program
 ```
 (you will need *openocd* software and ST-LINK programmer).
-### Via internal bootloader
-If you don't have ST-LINK and want to use bootloader, then run:
-```
-make -f Makefile.CMSIS program_bl
-```
-(you will need *stm32flash* software; serial port can be selected
-in the Makefile)
+
 
 ## Hacking
 ### Schematic/PCB
