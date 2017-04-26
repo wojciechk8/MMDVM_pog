@@ -13,9 +13,9 @@ page=1
 T 75900 40700 5 14 1 1 0 4 1
 pageof=1
 T 75400 42300 5 14 1 1 0 4 1
-revision=0.2
+revision=1.0
 T 75400 41500 5 14 1 1 0 4 1
-date=28-03-2017
+date=26-04-2017
 T 69700 40700 5 14 1 1 0 1 1
 author=Wojciech Krutnik
 }

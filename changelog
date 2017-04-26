@@ -17,4 +17,8 @@ REV 0.2 ----------------------------------------------------------------
   1. Corrected placement of some components
   2. Changed RPi connector footprint
   
-  
+REV 1.0 ----------------------------------------------------------------
+  Schematic:
+  1. Changed USART connection to USART1 (PA9, PA10), so now it's
+     possible to use the internal bootloader.
+  2. Changed location of testpoint TP41
