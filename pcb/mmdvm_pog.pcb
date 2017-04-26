@@ -9,7 +9,7 @@ Grid[5.00mil 0.0740mm 0.0940mm 1]
 PolyArea[3100.006200]
 Thermal[0.500000]
 DRC[7.68mil 0.1000mm 0.2000mm 5.91mil 0.2800mm 0.2800mm]
-Flags("showdrc,rubberband,nameonpcb,uniquename,clearnew,snappin,thindrawpoly")
+Flags("showdrc,nameonpcb,uniquename,clearnew,snappin,thindrawpoly")
 Groups("1,c:2,s:3:4:5")
 Styles["Signal,0.2500mm,0.9000mm,11.81mil,0.2500mm:Power,30.00mil,1.1000mm,0.5000mm,12.00mil:Fat,60.00mil,1.5000mm,0.8000mm,14.00mil:Skinny,8.00mil,30.00mil,0.2000mm,10.00mil"]
 
@@ -1107,7 +1107,7 @@ Element["" "TP70" "TP42" "unknown" 10.7420mm 11.1430mm -20.00mil -95.00mil 0 88 
 
 	)
 
-Element["" "TP70" "TP41" "unknown" 16.5840mm 21.6840mm -90.00mil -95.00mil 0 88 ""]
+Element["" "TP70" "TP41" "unknown" 25.8550mm 20.0330mm 50.00mil -50.00mil 0 88 ""]
 (
 	Attribute("device" "none")
 	Attribute("manufacturer" "unknown")
@@ -1715,7 +1715,7 @@ Element["" "LQFP64_10" "U1" "STM32F105RBT" 35.6340mm 29.8120mm 185.00mil 205.00m
 
 	)
 
-Element["" "0603" "R22" "220" 14.0440mm 23.7160mm 53.50mil -36.50mil 0 77 ""]
+Element["" "0603" "R22" "220" 14.0440mm 23.7160mm 53.50mil -31.50mil 0 77 ""]
 (
 	Pad[-25.59mil -4.92mil -25.59mil 4.92mil 29.52mil 20.00mil 35.52mil "1" "1" "square"]
 	Pad[25.59mil -4.92mil 25.59mil 4.92mil 29.52mil 20.00mil 35.52mil "2" "2" "square"]
@@ -2347,7 +2347,7 @@ Element["" "0805" "R44" "1k" 15.5680mm 17.3660mm -45.00mil -110.00mil 0 78 ""]
 
 	)
 
-Element["" "SO8" "U41" "MCP602" 21.4100mm 18.8900mm 95.00mil 150.00mil 1 98 ""]
+Element["" "SO8" "U41" "MCP602" 21.4100mm 18.8900mm 95.00mil 170.00mil 1 98 ""]
 (
 	Pad[-75.00mil 70.00mil -75.00mil 135.00mil 20.00mil 10.00mil 30.00mil "output" "1" "square,edge2"]
 	Pad[-25.00mil 70.00mil -25.00mil 135.00mil 20.00mil 10.00mil 30.00mil "inverting" "2" "square,edge2"]
@@ -2887,7 +2887,6 @@ Layer(1 "top" "copper")
 	Line[21.5370mm 39.5910mm 21.5370mm 41.3690mm 0.2500mm 0.5000mm "clearline"]
 	Line[21.5370mm 39.5910mm 22.1720mm 38.9560mm 0.2500mm 0.5000mm "clearline"]
 	Line[22.1720mm 38.9560mm 23.6960mm 38.9560mm 0.2500mm 0.5000mm "clearline"]
-	Line[22.4260mm 19.7790mm 22.0450mm 20.1600mm 0.2500mm 0.5000mm "clearline"]
 	Line[22.0450mm 20.1600mm 22.0450mm 21.4935mm 0.2500mm 0.5000mm "clearline"]
 	Line[23.3150mm 21.4935mm 23.3150mm 23.2080mm 30.00mil 24.00mil "clearline"]
 	Line[23.3150mm 23.2080mm 23.5690mm 23.4620mm 30.00mil 24.00mil "clearline"]
@@ -2896,7 +2895,6 @@ Layer(1 "top" "copper")
 	Line[25.7280mm 23.0960mm 25.7280mm 24.2240mm 0.2500mm 0.5000mm "clearline"]
 	Line[25.7280mm 24.2240mm 24.4580mm 25.4940mm 0.2500mm 0.5000mm "clearline"]
 	Line[20.7750mm 21.4935mm 19.5050mm 21.4935mm 0.2500mm 0.5000mm "clearline"]
-	Line[19.3145mm 21.6840mm 19.5050mm 21.4935mm 0.2500mm 0.5000mm "clearline"]
 	Line[17.7270mm 40.4800mm 18.1080mm 40.0990mm 0.2500mm 0.5000mm "clearline"]
 	Line[18.1080mm 40.0990mm 18.9970mm 40.0990mm 0.2500mm 0.5000mm "clearline"]
 	Line[8.4560mm 51.6560mm 8.4560mm 48.9999mm 0.2500mm 0.5000mm "clearline"]
@@ -2998,8 +2996,8 @@ Layer(1 "top" "copper")
 	Line[28.0249mm 11.8941mm 29.4001mm 11.8941mm 0.2500mm 0.5000mm "clearline"]
 	Line[29.4001mm 11.8941mm 29.4110mm 11.9050mm 0.2500mm 0.5000mm "clearline"]
 	Line[20.7750mm 21.4935mm 20.7750mm 20.1600mm 0.2500mm 0.5000mm "clearline"]
-	Line[20.7750mm 20.1600mm 21.7910mm 19.1440mm 0.2500mm 0.5000mm "clearline"]
-	Line[21.7910mm 19.1440mm 26.6170mm 19.1440mm 0.2500mm 0.5000mm "clearline"]
+	Line[20.7750mm 20.1600mm 22.1720mm 18.7630mm 0.2500mm 0.5000mm "clearline"]
+	Line[22.1720mm 18.7630mm 26.9980mm 18.7630mm 0.2500mm 0.5000mm "clearline"]
 	Line[14.6940mm 32.3520mm 14.6940mm 30.8280mm 0.2500mm 0.5000mm "clearline"]
 	Line[14.6940mm 35.4000mm 14.6940mm 33.8760mm 0.2500mm 0.5000mm "clearline"]
 	Line[12.3930mm 39.5910mm 17.6000mm 34.3840mm 0.2500mm 0.5000mm "clearline"]
@@ -3040,7 +3038,6 @@ Layer(1 "top" "copper")
 	Line[14.8060mm 28.0340mm 18.3620mm 28.0340mm 0.2500mm 0.5000mm "clearline"]
 	Line[18.3620mm 28.0340mm 19.3780mm 27.0180mm 0.2500mm 0.5000mm "clearline"]
 	Line[19.4542mm 28.0340mm 18.3874mm 1145.70mil 0.2500mm 0.5000mm "clearline"]
-	Line[19.3145mm 21.6840mm 16.5840mm 21.6840mm 0.2500mm 0.5000mm "clearline"]
 	Line[39.9520mm 24.4780mm 39.9520mm 22.9540mm 0.2500mm 0.5000mm "clearline"]
 	Line[39.9520mm 22.9540mm 40.3330mm 22.5730mm 0.2500mm 0.5000mm "clearline"]
 	Line[47.2060mm 12.0320mm 47.2060mm 10.9040mm 30.00mil 24.00mil "clearline"]
@@ -3087,12 +3084,8 @@ Layer(1 "top" "copper")
 	Line[27.6330mm 30.7010mm 27.6330mm 30.9550mm 0.2500mm 0.5000mm "clearline"]
 	Line[35.5070mm 20.9220mm 32.5860mm 18.0010mm 0.2500mm 0.5000mm "clearline"]
 	Line[32.5860mm 18.0010mm 29.6650mm 18.0010mm 0.2500mm 0.5000mm "clearline"]
-	Line[29.6650mm 18.0010mm 28.7760mm 18.8900mm 0.2500mm 0.5000mm "clearline"]
-	Line[28.7760mm 18.8900mm 27.7600mm 18.8900mm 0.2500mm 0.5000mm "clearline"]
-	Line[27.7600mm 18.8900mm 26.8710mm 19.7790mm 0.2500mm 0.5000mm "clearline"]
-	Line[26.8710mm 19.7790mm 22.4260mm 19.7790mm 0.2500mm 0.5000mm "clearline"]
 	Line[28.0140mm 17.7579mm 28.0031mm 17.7579mm 0.2500mm 0.5000mm "clearline"]
-	Line[28.0031mm 17.7579mm 26.6170mm 19.1440mm 0.2500mm 0.5000mm "clearline"]
+	Line[28.0031mm 17.7579mm 26.9980mm 18.7630mm 0.2500mm 0.5000mm "clearline"]
 	Line[28.9030mm 24.3510mm 28.9030mm 21.0490mm 0.2500mm 0.5000mm "clearline"]
 	Line[28.3950mm 24.0970mm 28.3950mm 20.7950mm 0.2500mm 0.5000mm "clearline"]
 	Line[28.3950mm 20.7950mm 29.7920mm 19.3980mm 0.2500mm 0.5000mm "clearline"]
@@ -3112,6 +3105,11 @@ Layer(1 "top" "copper")
 	Line[34.8720mm 18.7630mm 32.5860mm 16.4770mm 0.2500mm 0.5000mm "clearline"]
 	Line[32.5860mm 16.4770mm 32.2050mm 16.4770mm 0.2500mm 0.5000mm "clearline"]
 	Line[32.2050mm 10.1270mm 32.2050mm 16.4770mm 0.2500mm 0.5000mm "clearline"]
+	Line[29.6650mm 18.0010mm 27.6330mm 20.0330mm 0.2500mm 0.5000mm "clearline"]
+	Line[27.6330mm 20.0330mm 25.8550mm 20.0330mm 0.2500mm 0.5000mm "clearline"]
+	Line[25.8550mm 20.0330mm 25.6010mm 19.7790mm 0.2500mm 0.5000mm "clearline"]
+	Line[25.6010mm 19.7790mm 22.4260mm 19.7790mm 0.2500mm 0.5000mm "clearline"]
+	Line[22.0450mm 20.1600mm 22.4260mm 19.7790mm 0.2500mm 0.5000mm "clearline"]
 	Text[25.8110mm 55.7200mm 0 115 "(C) WK" "clearline"]
 	Text[58.5770mm 46.9570mm 1 105 "DC1713" "clearline"]
 	Text[57.1800mm 46.9570mm 1 105 "R0.2" "clearline"]
@@ -4885,6 +4883,7 @@ NetList()
 	)
 	Net("TX" "(unknown)")
 	(
+		Connect("TP41-1")
 		Connect("U1-20")
 		Connect("U41-3")
 	)
@@ -5080,7 +5079,6 @@ NetList()
 	Net("unnamed_net31" "(unknown)")
 	(
 		Connect("R41-1")
-		Connect("TP41-1")
 		Connect("U41-1")
 		Connect("U41-2")
 	)

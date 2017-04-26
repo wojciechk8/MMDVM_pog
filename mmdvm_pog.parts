@@ -41,7 +41,8 @@ POTENTIOMETER	P31	100k	POT_T75P	1	unknown	T75P-100K
 RESISTOR	R51 R52	27	0603	2	@SA	unknown
 RESISTOR	R62	120	0603	1	@TCXO	unknown
 RESISTOR	R21 R22	220	0603	2	unknown	unknown
-RESISTOR	R3 R5 R44	1k	0805	3	unknown	unknown
+RESISTOR	R3	220	0805	1	unknown	unknown
+RESISTOR	R5 R44	1k	0805	2	unknown	unknown
 RESISTOR	R1	10k	0603	1	unknown	unknown
 RESISTOR	R34	10k	0805	1	unknown	unknown
 RESISTOR	R31 R32 R33	22k	0805	3	unknown	unknown

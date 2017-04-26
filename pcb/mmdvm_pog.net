@@ -12,7 +12,7 @@ unnamed_net34	C31-1 TP31-1 R33-1 U31-3
 TX_R	FB21-1 C21-2 P41-2 
 unnamed_net33	TP42-1 P41-3 R44-2 
 unnamed_net32	C44-2 R44-1 
-unnamed_net31	TP41-1 U41-2 U41-1 R41-1 
+unnamed_net31	U41-2 U41-1 R41-1 
 unnamed_net30	U41-6 C44-1 U41-7 C43-2 
 unnamed_net29	U41-5 R43-2 C42-2 
 unnamed_net28	C43-1 R43-1 R42-2 
@@ -56,7 +56,7 @@ COS	Q22-3 U1-34
 PTT	Q21-1 R6-2 U1-33 
 RSSI	C22-2 FB24-1 U1-27 
 RX	U31-6 U31-7 C36-2 TP32-1 U1-26 
-TX	U41-3 U1-20 
+TX	TP41-1 U41-3 U1-20 
 SWCLK	U1-49 J4-4 
 SWDIO	U1-46 J4-2 
 unnamed_net2	C1-1 U1-5 X1-2 
