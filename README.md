@@ -63,7 +63,8 @@ make -f Makefile.CMSIS program
 (you will need *openocd* software and ST-LINK programmer).
 
 ### Via internal bootloader
-If you don't have ST-LINK and want to use bootloader, then run:
+If you don't have ST-LINK and want to use bootloader, then short JP1
+jumper and run:
 ```
 make -f Makefile.CMSIS program_bl
 ```
