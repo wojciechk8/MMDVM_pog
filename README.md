@@ -76,8 +76,10 @@ in the Makefile)
 ### Schematic/PCB
 This project was designed using *gEDA* software. In order to modify
 the schematic you will need my library of symbols/footprints, which is
-available [here](https://github.com/wojciechk8/geda-sym). Update of
-the PCB is done in the root directory with this command:
+available [here](https://github.com/wojciechk8/geda-sym). The library
+is also attached to this repository as a submodule (geda-sym). To get it
+contents after cloning the repository run `git submodule update --init`.
+Update of the PCB is done in the root directory with this command:
 ```
 gsch2pcb mmdvm_pog.prj
 ```
