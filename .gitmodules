@@ -1,0 +1,3 @@
+[submodule "geda-sym"]
+	path = geda-sym
+	url = git@github.com:wojciechk8/geda-sym.git
